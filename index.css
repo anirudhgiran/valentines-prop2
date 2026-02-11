@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'MeowScript';
+    src: url('./static/MeowScript.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Calligraphy';
+}
+
+:root {
+    --background-color: #FFBBC1;
+    --red-color: #C00000;
+    --pink-color: #FF8896;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./static/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heart {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 800px;
+}
+
+#heart > svg {
+    transition: all 0.5s ease;
+}
+
+#heart > svg:nth-child(1) {
+    transform: rotateY(180deg);
+}
+
+#heart > img {
+    position: absolute;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#audio {
+    display: none;
+}
+
+#speaker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#speaker > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#speaker > img:nth-child(2) {
+    display: none;
+}
+
+#ques1 {
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 500px;
+    background-color: var(--pink-color);
+    padding: 20px;
+    border-radius: 25px;
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    box-shadow: 0 0 50px 15px rgba(0,0,0,0.5);
+}
+
+#ques1 > h1 {
+    text-align: center;
+}
+
+#ques1 > img {
+    position: relative;
+    width: 250px;
+}
+
+#ques1 > video {
+    position: relative;
+    width: 250px;
+    display: none;
+}
+
+#btns > button{
+    font-size: 36px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#btnYes {
+    background-color: rgb(255, 187, 187);
+}
+
+#btnNo {
+    background-color: gray;
+}
